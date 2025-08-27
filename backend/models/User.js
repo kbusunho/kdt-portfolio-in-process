@@ -20,7 +20,7 @@ const userSchema=new mongoose.Schema(
         },
         isActive:{
             type:Boolean,
-            default:false
+            default:true//수정
         },
         failedLoginAttempts:{
             type:Number,

@@ -1,0 +1,46 @@
+/* 라이트/다크 공통 변수 정의 */
+$light: (
+  bg: #ffffff,
+  text: #111827,
+  primary: #1ce23d,
+  underline:#d8d8d8,
+  // Gray Tones
+  gray100: #f9fafb,
+  gray200: #f3f4f6,
+  gray300: #e5e7eb,
+  gray400: #d1d5db,
+  gray500: #9ca3af,
+  gray600: #6b7280,
+  gray700: #4b5563,
+  gray800: #374151,
+  gray900: #1f2937
+);
+
+$dark: (
+  bg: #0b1220,
+  text: #f0f0f0,
+  primary: #48ff66,
+  underline:#2b2b2b,
+  gray100: #1a1a1a,
+  gray200: #222222,
+  gray300: #2f2f2f,
+  gray400: #3d3d3d,
+  gray500: #525252,
+  gray600: #737373,
+  gray700: #a3a3a3,
+  gray800: #d4d4d4,
+  gray900: #f5f5f5
+);
+
+
+:root {
+  @each $k, $v in $light {
+    --#{$k}: #{$v};
+  }
+}
+
+[data-theme="dark"] {
+  @each $k, $v in $dark {
+    --#{$k}: #{$v};
+  }
+}
