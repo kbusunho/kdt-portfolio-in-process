@@ -1,0 +1,19 @@
+header {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    padding: 2rem;
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .right-wrap {
+            display: flex;
+            gap: 3rem;
+            nav ul {
+                display: flex;
+                gap: 2rem;
+            }
+        }
+    }
+}
