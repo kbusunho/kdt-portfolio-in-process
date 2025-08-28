@@ -1,0 +1,21 @@
+.about-inner {
+  flex-direction: column;
+  justify-content: center;
+
+  .t-wrap {
+
+    p.txt {
+      position: static;
+      text-align: left;
+      right: auto;
+    }
+  }
+  .about-container{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    >div {
+      flex: 1;
+    }
+  }
+}

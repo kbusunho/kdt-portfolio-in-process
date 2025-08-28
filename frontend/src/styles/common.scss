@@ -1,0 +1,92 @@
+.Button {
+  background: var(--primary);
+  color: var(--bg);
+  border: 0;
+  padding: .6rem 1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+section {
+  height: 100vh;
+  position: relative;
+}
+
+section,
+.Header {
+
+  .inner {
+    position: relative;
+    max-width: 160rem;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    h1.tit {
+      font-size: clamp(6rem, 8vw, 16rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: .9;
+      letter-spacing: -.05rem;
+
+
+
+      span {
+        display: block;
+        line-height: .8;
+        display: inline-flex;
+      }
+    }
+
+    h2.sub-tit {
+      font-size: clamp(2rem, 3vw, 5rem);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: -.05rem;
+
+    }
+
+    p.txt {
+      font-size: clamp(2rem, 2vw, 2.8rem);
+      color: var(--gray600);
+    }
+
+    .star-spin {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1em;
+      height: 1em;
+      animation: rotate 3s linear infinite;
+      transform-origin: 50% 50%;
+
+      i.star {
+        font-style: normal;
+        line-height: 1;
+        color: var(--primary);
+      }
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    // 작은 화면일 때 좌우 여백 주기
+    @media (max-width: 1600px) {
+      padding: 1rem 2rem;
+    }
+
+    @media (max-width: 768px) {
+      padding: 1rem 1rem;
+    }
+
+  }
+}
