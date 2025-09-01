@@ -1,0 +1,14 @@
+
+  .inner.admin-header-inner {
+    max-width: 128rem;
+    margin: auto;
+    text-align: right;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-bottom: .2rem solid #ccc;
+    button {
+      background-color: var(--bg);
+      padding:1rem 2rem;
+      border-radius: .5rem;
+    }
+  }

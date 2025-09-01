@@ -1,0 +1,220 @@
+.inner.contact-inner {
+  flex-direction: column;
+  justify-content: center;
+
+  @media screen and (max-width:1200px) {
+    padding: 10rem 2rem;
+  }
+
+  @media screen and (max-width:768px) {
+
+    padding: 5rem 1rem;
+  }
+
+  >h1.tit {
+    align-self: flex-start;
+    transform: translateX(-20rem);
+
+    @media screen and (max-width:1200px) {
+      transform: translateX(0);
+    }
+  }
+
+  .contact-wrapper {
+    padding: 16rem 0 0;
+    display: flex;
+    width: 100%;
+    gap: 5rem;
+
+    @media screen and (max-width:1200px) {
+      padding-top: clamp(5rem, 6vw, 10rem);
+    }
+
+    @media screen and (max-width:999px) {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .contact-form {
+      width: 50%;
+
+      @media screen and (max-width:999px) {
+        width: 100%;
+      }
+
+      .form-rows {
+        >li {
+
+          display: flex;
+          line-height: 2;
+          padding: .5rem 0;
+
+          label {
+            width: 15.8rem;
+            font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+            font-weight: 600;
+            color: var(--gray600);
+            text-align: center;
+
+          }
+
+
+
+          .field {
+            flex: 1;
+
+            input,
+            textarea {
+              font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+
+              width: 100%;
+              border-radius: .3rem;
+              padding: .5rem 2rem;
+              background-color: transparent;
+              border: .1rem solid var(--gray200);
+            }
+          }
+
+          @media screen and (max-width:999px) {
+            flex-direction: column;
+            align-items: center;
+
+            label {
+              width: 20%;
+              padding-left: 0;
+            }
+
+            .field {
+              width: 100%;
+
+              input,
+              textarea {
+              }
+            }
+
+          }
+
+          &.actions {
+            justify-self: flex-end;
+
+            .Button {
+              display: inline-flex;
+              // width:  clamp(8rem ,10vw, 14.5rem);
+              // height: clamp(2rem , 2.8vw, 4rem);
+              justify-content: center;
+              align-items: center;
+              border-radius: 10rem;
+              font-size: clamp(1rem , 1.4vw, 1.6rem);
+              font-weight: 800;
+              padding: .5rem 2rem;
+              
+            }
+          }
+        }
+      }
+    }
+
+    .contact-list {
+      display: flex;
+      width: 100%;
+      flex: 1;
+      flex-direction: column;
+      border-radius: .5rem;
+      overflow: hidden;
+
+      li {
+        flex: 1;
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width:999px) {
+          padding: 2rem 1rem;
+        }
+
+        // border-radius: .8rem;
+        .label {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          min-width: 8rem;
+          font-weight: 700;
+          flex: 1;
+          text-align: center;
+          color: var(--neutral-500);
+          font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+
+          font-weight: 400;
+          // background-color: var(--neutral-200);
+          height: 100%;
+
+          @media screen and (max-width:999px) {
+            display: none;
+          }
+        }
+
+        .content {
+          flex: 2;
+          text-align: left;
+          padding-left: 4rem;
+
+          @media screen and (max-width:999px) {
+            padding-left: 0;
+            text-align: center;
+
+          }
+
+          .value {
+            display: block;
+            color: var(--neutral-600);
+            font-size: clamp(1.4rem, 1.6vw, 1.8rem);
+
+          }
+
+          .hint {
+            display: block;
+            margin-top: .4rem;
+            color: var(--neutral-600);
+            font-size: .9rem;
+          }
+
+
+        }
+
+        .chips {
+          display: flex;
+          gap: 1rem;
+
+
+          .chip {
+            padding: .4rem 2rem;
+            border-radius: 999rem;
+            background: var(--neutral-900);
+            color: var(--neutral-100);
+            display: block;
+            font-size: 1.4rem;
+          }
+
+          @media screen and (max-width:999px) {
+            justify-content: center;
+          }
+        }
+
+      }
+
+      li+li {
+        border-top: 1px dashed var(--neutral-900);
+
+      }
+
+
+      li:hover {
+        background-color: var(--primary);
+
+        .label {
+          background-color: var(--neutral-900);
+          color: var(--neutral-100);
+        }
+      }
+    }
+  }
+}

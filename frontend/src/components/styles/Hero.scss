@@ -1,0 +1,33 @@
+.inner.hero-inner {
+  p.txt {
+    position: absolute;
+    right: 3rem;
+    bottom: 14rem;
+    text-align: right;
+
+  }
+  .arrow {
+    position: absolute;
+    bottom: 5rem;
+    font-size: 4rem;
+    color: var(--text);
+    left: 50%;
+    margin-left: -1rem;
+      animation: up 1s linear infinite alternate;
+      @media screen and (max-width:768px){
+        font-size: 2rem;
+        
+      }
+
+  }
+      @media screen and (max-width:768px){
+         h1.tit span{
+          display: block;
+          .star-spin{
+            position: absolute;
+            right:calc(50% - 5rem);
+            top: calc(50% - 5rem);
+          }
+         }
+      }
+}
