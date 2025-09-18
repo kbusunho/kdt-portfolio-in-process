@@ -21,5 +21,5 @@ export default function AuthRedirectRoute({ Component }) {
   }, []);
 
   if (isAuthenticated === null) return null;               // 로딩 중
-  return isAuthenticated ? <Navigate to="/admin/post" replace /> : <Component />;
+  return isAuthenticated ? <Navigate to="/admin/posts" replace /> : <Component />;
 }
