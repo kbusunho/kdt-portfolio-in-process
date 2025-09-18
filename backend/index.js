@@ -2,14 +2,13 @@ const dotenv = require("dotenv");
 const express = require("express");
 const mongoose =require("mongoose")
 const app = express();
-const cors=require("cors")
-const cookieParser = require("cookie-parser");
-dotenv.config();
-const PORT = process.env.PORT || 3000; 
+const cors = require('cors');
+require('dotenv').config();
 
-app.set("trust proxy", 1);  
+const FRONT_ORIGIN = process.env.FRONT_ORIGIN;
+
 app.use(cors({
-  origin: process.env.FRONT_ORIGIN || 'http://localhost:5173',
+  origin: FRONT_ORIGIN,
   credentials: true,
 }));
 app.use(cookieParser());
