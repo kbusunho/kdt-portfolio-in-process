@@ -2,10 +2,10 @@
 
 const aboutMe = {
   basic: {
-    name: "최선호",
-    age: 22,
-    location: "남양주, 대한민국",
-    mbti: "ENFP",
+    name: "홍길동",
+    age: 29,
+    location: "서울, 대한민국",
+    mbti: "INTJ",
   },
   skills: [
     "JavaScript (ES6+)",

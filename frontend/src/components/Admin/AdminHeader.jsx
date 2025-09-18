@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
-import { api } from "../../lib/api"; // baseURL + withCredentials: true
+import { api } from "../../lib/api";
 import "./styles/AdminHeader.scss"
 const AdminHeader = () => {
   const nav = useNavigate();
@@ -18,12 +18,11 @@ const AdminHeader = () => {
     }
   };
   return (
-
-      <div className='inner admin-header-inner'>
-        <form onSubmit={handleLogout}>
-          <button type="submit">로그아웃</button>
-        </form>
-      </div>
+    <div className='inner admin-header'>
+      <form onSubmit={handleLogout}>
+        <button type="submit">로그아웃</button>
+      </form>
+    </div>
   )
 }
 

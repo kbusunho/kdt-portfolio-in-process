@@ -1,0 +1,71 @@
+.aboutme-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    
+        @media screen and (max-width:1200px) {
+            height: auto !important;
+        }
+
+    h1.tit {
+        align-self: flex-end;
+        transform: translateX(11vw);
+        position: relative;
+
+        @media screen and (max-width:1599px) {
+            transform: translateX(0);
+            align-self: flex-start;
+        }
+
+        .star-spin {
+            position: absolute;
+            left: -10rem;
+            top: -10rem;
+        }
+    }
+
+    .about-container {
+        display: flex;
+        gap: 2rem;
+        width: 100%;
+        margin-top: 5.3rem;
+
+        @media screen and (max-width:1440px) {
+            flex-wrap: wrap;
+        }
+
+        .in-wrap {
+            // width: 25%;
+            flex: 1;
+
+            @media screen and (max-width:1440px) {
+                min-width: 30rem;
+            }
+
+            .lst {
+                >li {
+                    line-height: 2;
+                    padding: .5rem 1rem 0;
+                    font-size: 1.4rem;
+
+                    >strong {
+                        display: inline-block;
+                        padding: 0 3rem 0 0;
+                    }
+
+                    &:nth-child(even) {
+                        background-color: var(--gray100);
+                    }
+
+                    &:hover {
+                        background-color: var(--primary);
+                        color: var(--bg);
+                    }
+
+                }
+            }
+        }
+
+    }
+}

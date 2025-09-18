@@ -1,102 +1,63 @@
-/* src/styles/pages/_adminLogin.scss */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    // gap: 5rem;
 
-.admin-login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: #f5f5f5;
+    .login-header {
+        text-align: center;
+        margin-bottom: 2rem;
 
-  .login-header {
-    text-align: center;
-    margin-bottom: 2rem;
-
-    h3 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      color: #333;
-    }
-
-    p {
-      font-size: 1.4rem;
-      color: #666;
-    }
-  }
-
-  .login-form {
-    width: 100%;
-    max-width: 400px;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 0.8rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-
-    .form-field {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 1.2rem;
-
-      label {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-        color: #444;
-      }
-
-      input {
-        padding: 0.8rem 1rem;
-        font-size: 1.4rem;
-        border: 1px solid #ccc;
-        border-radius: 0.4rem;
-        transition: border-color 0.2s;
-
-        &:focus {
-          outline: none;
-          border-color: #007bff;
+        h3 {
+            font-size: 2rem;
+            margin-bottom: .5rem;
+            color: #333;
         }
-      }
+
+        p {
+            font-size: 1.4rem;
+            color: #666;
+        }
     }
 
-    .error-box {
-      margin-top: 1rem;
-      padding: 1rem;
-      background: #ffe6e6;
-      border: 1px solid #ff9999;
-      border-radius: 0.4rem;
-      color: #cc0000;
-      font-size: 1.3rem;
+    .login-form {
+        max-width: 40rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        border-radius: .8rem;
+        .form-field{
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            
+            lable {
+                font-size: 1.2rem;
+                color:#444
+            }
+            input {
+                padding:0.8rem 1rem;
+                border: 1px solid #ccc;
+                border-radius: .4rem;
+                font-size: 1.4rem;
 
-      .retry-count {
-        margin-top: 0.5rem;
-        font-size: 1.2rem;
-        color: #a00;
-      }
+                &:focus {
+                    outline: none;
+                    border-color: rgb(250, 42, 191);
+                }
+            }
+        }
+        button {
+            width: 100%;
+            background-color: #007bff;
+            padding: 1rem;
+            border-radius: .4rem;
+            color: #fff;
+            transition: background .2s;
+            &:hover{
+                background-color: #1862b0;
+            }
+        }
     }
-
-    .login-button {
-      width: 100%;
-      padding: 1rem;
-      background: #007bff;
-      color: #fff;
-      font-size: 1.6rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 0.4rem;
-      cursor: pointer;
-      transition: background 0.2s;
-
-      &:hover {
-        background: #0056b3;
-      }
-
-      &:disabled {
-        background: #999;
-        cursor: not-allowed;
-      }
-    }
-  }
 }

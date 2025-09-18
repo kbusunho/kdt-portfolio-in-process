@@ -1,0 +1,32 @@
+footer {
+    background-color: var(--gray900);
+
+    .inner {
+        padding: 4rem 0;
+        max-width: 160rem;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        color: var(--gray100);
+        font-size: clamp(1.2rem, 1.4vw, 1.6rem);
+
+        @media screen and (max-width:1599px) {
+            padding: 3rem 2rem;
+
+        }
+
+        @media screen and (max-width:999px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .right {
+            a {
+                display: inline-block;
+                margin-left: 2rem;
+            }
+        }
+    }
+}
