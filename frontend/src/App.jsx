@@ -24,7 +24,7 @@ function App() {
         <Route path="/admin/login" element={<AuthRedirectRoute Component={AdminLogin} />} />
 
         <Route path="/admin/post" element={<RequireAuth Component={AdminPost} />} />
-        <Route path='*' element={<Notfound />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </ThemeProvider>
   )
