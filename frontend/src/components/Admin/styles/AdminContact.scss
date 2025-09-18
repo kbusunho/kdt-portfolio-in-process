@@ -1,0 +1,125 @@
+/* styles/AdminContact.scss */
+
+.inner.admin-contact-inner {
+  padding: 2rem;
+  background: #f9f9f9;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  max-width: 120rem;
+  margin: auto;
+  
+  h2 {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-weight: 600;
+  }
+
+  p {
+    color: #777;
+    font-size: 1rem;
+  }
+
+  .contact-list {
+    display: flex;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    
+    gap: 2rem;
+  }
+
+  .contact-item {
+    width: clamp(250px, 30%, 400px);
+    background: #fff;
+    border-radius: 8px;
+    flex: 1;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    h3 {
+      margin: 0 0 1rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #222;
+    }
+
+    p {
+      margin: 0.25rem 0;
+      font-size: 1.6rem;
+      line-height: 1.4;
+
+      strong {
+        color: #555;
+        margin-right: 0.25rem;
+      }
+    }
+
+    /* 상태 표시 스타일 */
+    p:last-child {
+      margin-top: 0.5rem;
+      font-weight: 500;
+
+      &::before {
+        content: "● ";
+        font-size: 0.8rem;
+      }
+
+      /* 상태별 색상 */
+      &:contains("pending") {
+        color: #d97706; // 주황
+      }
+      &:contains("in progress") {
+        color: #2563eb; // 파랑
+      }
+      &:contains("completed") {
+        color: #16a34a; // 초록
+      }
+    }
+
+    /* 버튼 영역 */
+    .btns {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.5rem;
+
+      button {
+        flex: 1;
+        padding: 0.6rem 1rem;
+        border: none;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.1s ease;
+        color: #fff;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+   /* 상태 변경 버튼 (세련된 블루) */
+    &:first-child {
+      background: #3b82f6;   // 밝은 네이비 블루
+      &:hover {
+        background: #2563eb; // 딥 블루
+      }
+    }
+
+    /* 삭제 버튼 (코랄 레드) */
+    &.danger {
+      background: #f87171;   // 소프트 레드
+      &:hover {
+        background: #ef4444; // 코랄·톤다운 레드
+      }
+    }
+      }
+    }
+  }
+}

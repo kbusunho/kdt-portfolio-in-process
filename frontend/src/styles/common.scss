@@ -1,0 +1,172 @@
+.Button {
+  background: var(--text);
+  color: var(--bg);
+  border: 0;
+  padding: .6rem 1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+section {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 1200px) {
+    &#Aboutme {
+
+
+      height: auto;
+    }
+    &#Contact {
+
+
+      height: auto;
+    }
+  }
+
+  &#Work {
+    height: auto;
+  }
+}
+
+footer,
+section,
+.Header {
+
+  .inner {
+    position: relative;
+    max-width: 160rem;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    h1.tit {
+      font-size: clamp(6rem, 8vw, 16rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: .9;
+      letter-spacing: -.05rem;
+
+
+
+      span {
+        display: block;
+        line-height: .8;
+        display: inline-flex;
+      }
+    }
+
+    h2.sub-tit {
+      font-size: clamp(2rem, 3vw, 5rem);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: -.05rem;
+
+    }
+
+    h3.sub-tit-2 {
+      font-family: " Noto Sans KR";
+      text-transform: uppercase;
+      line-height: 1;
+      letter-spacing: 1.9rem;
+      font-size: clamp(4rem, 6vw, 9.6rem);
+    }
+
+    h4.lst-tit {
+      font-size: clamp(2rem, 4vw, 5.4rem);
+      font-weight: 400;
+      letter-spacing: -.48rem;
+              @media screen and (max-width:1200px) {
+                letter-spacing: -.02rem;
+              }
+    }
+
+    p.lst-dsc {
+      font-size: clamp(1.2rem, 1.2vw, 1.6rem);
+      font-weight: 200;
+      margin: 1rem 0;
+      color: var(--gray700);
+    }
+
+    p.txt {
+      font-size: clamp(1.6rem, 2vw, 2.8rem);
+      color: var(--gray600);
+
+      @media screen and (max-width:400px) {
+        display: none;
+      }
+    }
+
+    .tags {
+      display: flex;
+      gap: 1rem;
+      @media screen and (max-width:1200px) {
+        flex-wrap: wrap;
+        gap: .8rem;
+      }
+      >span {
+        display: block;
+        padding: .5rem 1.6rem;
+        color: var(--gray100);
+        border-radius: 10rem;
+        background-color: var(--gray900);
+
+        @media screen and (max-width:1200px) {
+          padding: .3rem 1rem;
+        }
+      }
+
+
+
+    }
+
+    .star-spin {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1em;
+      height: 1em;
+      animation: rotate 3s ease-in-out infinite alternate;
+      transform-origin: 50% 50%;
+
+      i.star {
+        font-style: normal;
+        line-height: 1;
+        color: var(--primary);
+      }
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes up {
+      from {
+        transform: translateY(0);
+      }
+
+      to {
+        transform: translateY(2rem);
+      }
+    }
+
+    // 작은 화면일 때 좌우 여백 주기
+    @media (max-width: 1600px) {
+      padding: 1rem 2rem;
+    }
+
+    @media (max-width: 768px) {
+      padding: 1rem 1rem;
+    }
+
+  }
+}
