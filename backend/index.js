@@ -14,7 +14,7 @@ app.use(cors({
 }));
 app.use(cookieParser());
 app.use(express.json())
-app.use(express.urlencoded())
+app.use(express.urlencoded({ extended: true })) // 수정: 옵션 명시
 
 mongoose.connect(process.env.MONGO_URI).then(()=>{
     console.log("연결성공")
@@ -28,7 +28,6 @@ app.use("/api/contact",contactRoutes)
 app.listen(PORT, () => {
     console.log("Server is running");
 })
-
 
 app.get("/", (req,res) => {
     res.send("Hello, world");
