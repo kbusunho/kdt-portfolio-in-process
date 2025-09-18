@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { api } from '../lib/api';
-import "./styles/adminLogin.scss";
+import "../styles/AdminLogin.scss";
 
 const AdminLogin = () => {
   const nav = useNavigate();
