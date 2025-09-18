@@ -14,6 +14,13 @@ export async function fetchSomething() {
   return res.json();
 }
 
+export async function fetchContacts() {
+  const res = await fetch(`${API_URL}/api/contacts`, {
+    credentials: 'include', // 인증 필요시
+  });
+  return res.json();
+}
+
 // 401 나오면 전역에서 바로 로그인 페이지로
 // api.interceptors.response.use(
 //   (res) => res,

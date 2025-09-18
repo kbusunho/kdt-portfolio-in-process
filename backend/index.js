@@ -4,10 +4,8 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/userRoutes');
 const contactRoutes = require('./routes/contactRoutes');
-const jwt = require('jsonwebtoken');
 
 const app = express();
-const secret = process.env.JWT_SECRET;
 
 app.use(cors({
   origin: process.env.FRONT_ORIGIN,
@@ -36,5 +34,3 @@ app.listen(PORT, () => {
 app.get("/", (req,res) => {
     res.send("Hello, world");
 })
-
-jwt.sign(payload, secret, { expiresIn: '1h' });
