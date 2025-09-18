@@ -1,7 +1,7 @@
 import React from 'react'
 import Nav from './Nav'
 import "./styles/Header.scss"
-import { ThemeProvider, useTheme } from '../contexts/ThemeContext'
+import { useTheme } from '../contexts/ThemeContext'
 import { useState,useEffect } from 'react'
 
 const Header = () => {

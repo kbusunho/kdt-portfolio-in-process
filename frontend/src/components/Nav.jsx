@@ -1,5 +1,4 @@
 import React from 'react'
-import { ThemeProvider, useTheme } from '../contexts/ThemeContext'
 import useSmoothScroll from '../hook/useSmoothScroll'
 import "./styles/Nav.scss"
 const Nav = ({ open = false, onClose = () => { } }) => {
