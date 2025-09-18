@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from "./pages/Home"
 import AdminLogin from "./pages/AdminLogin"
 import AdminPost from "./pages/AdminPost"
-import Notfound from "./pages/Notfound"
+import Notfound from "./pages/NotFound"
 import AuthRedirectRoute from './routes/AuthRedirectRoute'
 import RequireAuth from './routes/RequireAuth';
 import "./styles/main.scss"
